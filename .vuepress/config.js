@@ -26,11 +26,7 @@ export default defineUserConfig({
       type: 'right'
     }),
     commentPlugin({
-      provider: "Giscus",
-      repo: "isno/thebytebook",
-      repoId: "R_kgDOIKTmzQ",
-      category: "General",
-      categoryId: "DIC_kwDOIKTmzc4CV4OL"
+     
     }),
     readingTimePlugin({
       // your options
