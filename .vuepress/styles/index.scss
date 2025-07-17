@@ -1,0 +1,44 @@
+.custom-container {
+    img {
+     	margin-right:auto;
+     	margin-left:auto;
+  	}
+    
+}
+.custom-container .center {
+      text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.custom-container {
+    .right {
+    	text-align: right;
+    }
+}
+
+.page-nav,.page .page-meta,.page .theme-default-content {
+  max-width: 90%;
+}
+
+table {
+  width: 100%;
+  display: table;
+}
+
+@media print{
+  .navbar,
+  .sidebar,
+  .sidebar-mask,
+  .page-nav,
+  .page .page-meta,
+  .page-info {
+    display: none;
+  }
+  .page {
+    padding-left: inherit;
+  }
+
+}
