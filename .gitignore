@@ -1,0 +1,23 @@
+node_modules
+.temp
+.cache
+yarn.lock
+.DS_store
+# Node rules:
+## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+package-lock.json
+yarn-error.log
+node_modules
+yarn.lock
+
+dist
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+.cache
+chrome
+
+.vuepress
