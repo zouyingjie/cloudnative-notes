@@ -9,6 +9,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '云原生架构笔记',
   description: '构建大规模高可用的分布式系统',
+  base: "/",
 
 
   plugins: [
@@ -45,6 +46,7 @@ export default defineUserConfig({
     editLinks: true,
     editLinkText: '在GitHub中编辑',
 
+    
     repo: 'https://github.com/zouyingjie/cloudnative-notes',
     repoLabel: 'GitHub',
     navbar: [{
