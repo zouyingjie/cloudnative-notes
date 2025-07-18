@@ -26,7 +26,11 @@ export default defineUserConfig({
       type: 'right'
     }),
     commentPlugin({
-     
+      provider: "Giscus",
+      repo: "zouyingjie/cloudnative-notes",
+      repoId: "R_kgDOPOHDYg",
+      category: "General",
+      categoryId: "DIC_kwDOPOHDYs4CtIgJ"
     }),
     readingTimePlugin({
       // your options
