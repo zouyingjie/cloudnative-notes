@@ -9,7 +9,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '云原生架构笔记',
   description: '构建大规模高可用的分布式系统',
-  base: "/",
+  base: "/cloudnative-notes/",
 
 
   plugins: [
