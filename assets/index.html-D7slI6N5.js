@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-ec65b2d4","path":"/common-design/data-design/","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1752893645000,"contributors":[{"name":"zouyingjie","email":"yingjiezou1@gmail.com","commits":1}]},"filePathRelative":"common-design/data-design/README.md","readingTime":{"minutes":0.21,"words":62}}');export{e as data};

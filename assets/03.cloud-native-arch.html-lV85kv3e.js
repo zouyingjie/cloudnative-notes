@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as c,a,b as o}from"./app-ouoXKg5d.js";const n={};function s(d,e){return c(),t("div",null,e[0]||(e[0]=[a("h1",{id:"云原生架构概览",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#云原生架构概览","aria-hidden":"true"},"#"),o(" 云原生架构概览")],-1)]))}const _=r(n,[["render",s],["__file","03.cloud-native-arch.html.vue"]]);export{_ as default};

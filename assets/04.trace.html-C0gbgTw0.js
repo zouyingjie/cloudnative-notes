@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-52b5f157","path":"/observability/04.trace.html","title":"链路追踪","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1752893645000,"contributors":[{"name":"zouyingjie","email":"yingjiezou1@gmail.com","commits":1}]},"filePathRelative":"observability/04.trace.md","readingTime":{"minutes":0.01,"words":4}}');export{e as data};

@@ -1,0 +1,1 @@
+import{_ as a,c as o,o as c,a as r,b as t}from"./app-ouoXKg5d.js";const d={};function n(s,e){return c(),o("div",null,e[0]||(e[0]=[r("h1",{id:"docker-最佳实践",tabindex:"-1"},[r("a",{class:"header-anchor",href:"#docker-最佳实践","aria-hidden":"true"},"#"),t(" Docker 最佳实践")],-1)]))}const l=a(d,[["render",n],["__file","06.docker.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as t,a as r,b as c}from"./app-ouoXKg5d.js";const o={};function n(i,e){return t(),s("div",null,e[0]||(e[0]=[r("h1",{id:"服务注册与发现",tabindex:"-1"},[r("a",{class:"header-anchor",href:"#服务注册与发现","aria-hidden":"true"},"#"),c(" 服务注册与发现")],-1)]))}const _=a(o,[["render",n],["__file","01.service-discovery.html.vue"]]);export{_ as default};

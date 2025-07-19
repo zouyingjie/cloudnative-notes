@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as t,a as n,b as c}from"./app-ouoXKg5d.js";const o={};function r(d,e){return t(),a("div",null,e[0]||(e[0]=[n("h1",{id:"一致性与共识算法",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#一致性与共识算法","aria-hidden":"true"},"#"),c(" 一致性与共识算法")],-1)]))}const i=s(o,[["render",r],["__file","03.consistency-and-consensus.html.vue"]]);export{i as default};

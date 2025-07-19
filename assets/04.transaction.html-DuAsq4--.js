@@ -1,0 +1,1 @@
+import{_ as t,c as r,o as n,a,b as o}from"./app-ouoXKg5d.js";const s={};function c(_,e){return n(),r("div",null,e[0]||(e[0]=[a("h1",{id:"分布式系统的事务处理",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#分布式系统的事务处理","aria-hidden":"true"},"#"),o(" 分布式系统的事务处理")],-1)]))}const i=t(s,[["render",c],["__file","04.transaction.html.vue"]]);export{i as default};

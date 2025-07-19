@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as c,a,b as n}from"./app-ouoXKg5d.js";const o={};function s(_,e){return c(),t("div",null,e[0]||(e[0]=[a("h1",{id:"链路追踪",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#链路追踪","aria-hidden":"true"},"#"),n(" 链路追踪")],-1)]))}const l=r(o,[["render",s],["__file","04.trace.html.vue"]]);export{l as default};

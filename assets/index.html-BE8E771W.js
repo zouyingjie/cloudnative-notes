@@ -1,0 +1,1 @@
+import{_ as t,c as n,o as s,a as r}from"./app-ouoXKg5d.js";const a={};function c(l,e){return s(),n("div",null,e[0]||(e[0]=[r("p",null,"在需求确定后就需要进行技术方案的设计，此时首要任务就是进行数据建模。本部分对笔者最常用的 MySQL、Elasticsearch、Redis 三种数据存储的建模实践进行简要总结。",-1)]))}const _=t(a,[["render",c],["__file","index.html.vue"]]);export{_ as default};

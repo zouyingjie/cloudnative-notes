@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as n,a,b as d}from"./app-ouoXKg5d.js";const i={};function o(s,e){return n(),t("div",null,e[0]||(e[0]=[a("h1",{id:"全局唯一-id-实现方案",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#全局唯一-id-实现方案","aria-hidden":"true"},"#"),d(" 全局唯一 ID 实现方案")],-1)]))}const _=r(i,[["render",o],["__file","02.unique-id.html.vue"]]);export{_ as default};

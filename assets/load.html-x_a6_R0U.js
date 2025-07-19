@@ -1,0 +1,1 @@
+import{_ as r,c as t,o,a,b as n}from"./app-ouoXKg5d.js";const s={};function c(d,e){return o(),t("div",null,e[0]||(e[0]=[a("h1",{id:"全链路压测",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#全链路压测","aria-hidden":"true"},"#"),n(" 全链路压测")],-1)]))}const _=r(s,[["render",c],["__file","load.html.vue"]]);export{_ as default};

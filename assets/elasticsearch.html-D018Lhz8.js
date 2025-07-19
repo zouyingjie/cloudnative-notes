@@ -1,0 +1,1 @@
+import{_ as s,c,o as r,a,b as t}from"./app-ouoXKg5d.js";const l={};function i(n,e){return r(),c("div",null,e[0]||(e[0]=[a("h1",{id:"elasticsearch-数据建模最佳实践",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#elasticsearch-数据建模最佳实践","aria-hidden":"true"},"#"),t(" Elasticsearch 数据建模最佳实践")],-1)]))}const d=s(l,[["render",i],["__file","elasticsearch.html.vue"]]);export{d as default};

@@ -1,0 +1,1 @@
+import{_ as r,c as s,o as t,a,b as l}from"./app-ouoXKg5d.js";const n={};function o(c,e){return t(),s("div",null,e[0]||(e[0]=[a("h1",{id:"mysql-数据建模最佳实践",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#mysql-数据建模最佳实践","aria-hidden":"true"},"#"),l(" MySQL 数据建模最佳实践")],-1)]))}const m=r(n,[["render",o],["__file","mysql.html.vue"]]);export{m as default};

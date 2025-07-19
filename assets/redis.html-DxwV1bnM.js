@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as t,a as r,b as d}from"./app-ouoXKg5d.js";const i={};function n(o,e){return t(),s("div",null,e[0]||(e[0]=[r("h1",{id:"redis-数据建模最佳实践",tabindex:"-1"},[r("a",{class:"header-anchor",href:"#redis-数据建模最佳实践","aria-hidden":"true"},"#"),d(" Redis 数据建模最佳实践")],-1)]))}const l=a(i,[["render",n],["__file","redis.html.vue"]]);export{l as default};

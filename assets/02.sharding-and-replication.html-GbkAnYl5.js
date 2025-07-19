@@ -1,0 +1,1 @@
+import{_ as r,c as n,o as t,a,b as o}from"./app-ouoXKg5d.js";const s={};function c(d,e){return t(),n("div",null,e[0]||(e[0]=[a("h1",{id:"数据分区与复制",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#数据分区与复制","aria-hidden":"true"},"#"),o(" 数据分区与复制")],-1)]))}const l=r(s,[["render",c],["__file","02.sharding-and-replication.html.vue"]]);export{l as default};

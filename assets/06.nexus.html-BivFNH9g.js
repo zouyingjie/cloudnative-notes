@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as r,a,b as t}from"./app-ouoXKg5d.js";const o={};function c(_,e){return r(),n("div",null,e[0]||(e[0]=[a("h1",{id:"nexus-简明教程",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#nexus-简明教程","aria-hidden":"true"},"#"),t(" Nexus 简明教程")],-1)]))}const u=s(o,[["render",c],["__file","06.nexus.html.vue"]]);export{u as default};

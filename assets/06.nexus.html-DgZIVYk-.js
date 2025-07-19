@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-47e1a589","path":"/devops/06.nexus.html","title":"Nexus 简明教程","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1752893645000,"contributors":[{"name":"zouyingjie","email":"yingjiezou1@gmail.com","commits":1}]},"filePathRelative":"devops/06.nexus.md","readingTime":{"minutes":0.02,"words":5}}');export{e as data};
