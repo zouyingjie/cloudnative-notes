@@ -46,7 +46,6 @@ export default defineUserConfig({
     editLinks: true,
     editLinkText: '在GitHub中编辑',
 
-    
     repo: 'https://github.com/zouyingjie/cloudnative-notes',
     repoLabel: 'GitHub',
     navbar: [{
@@ -60,10 +59,6 @@ export default defineUserConfig({
     {
       text: '讨论',
       link: 'https://github.com/zouyingjie/cloudnative-notes/discussions'
-    },
-    {
-      text: 'GitHub仓库',
-      link: 'https://github.com/zouyingjie/cloudnative-notes'
     }
     ],
     sidebar: [
