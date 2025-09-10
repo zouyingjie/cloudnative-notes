@@ -1,8 +1,8 @@
-# 调度配置与实现原理
+# 调度原理
 
 所谓调度就是按照一系列的需求、规则，将 Pod 调度至合适的 Node 上，这个过程是由 kube-scheduler 组件负责完成。下面是 Kubernetes 提供的一些调度方式：
 
-### 1. 手动调度
+### 手动调度
 
 Pod 的定义中有 nodeName 属性，kube-scheduler 就是在选择出最合适的节点后修改 Pod 的 nodeName 来指定 Pod 的运行节点。我们可以在定义 Pod 时直接设置。示例如下：
 
@@ -20,7 +20,7 @@ spec:
 ```
 
 
-### 2. NodeSelector 节点选择器
+### NodeSelector 节点选择器
 
 Kubernetes 允许使用 label 标签对资源进行标识。可以通过在 Node 打 label，然后使用 nodeSelector 匹配这些 label，将 Pod 调度到对应节点。
 
@@ -44,7 +44,7 @@ spec:
 ```
 
 
-### 3. Node & Pod Affinity 亲和性调度
+### Node & Pod Affinity 亲和性调度
 
 nodeSelector 只能简单的根据标签是否相等来进行调度，会被逐渐弃用。现在更推荐使用拥有更强大的节点关联规则，调度更加灵活的 `Node/Pod Affinity` （亲和度） 进行调度。
 亲和性规则分为 `Node Affinity` 节点亲和度和 `Pod Affinity` Pod 亲和度两种。
@@ -157,7 +157,7 @@ spec:
  
  不过在官网的建议中，Pod 亲和、反亲和的调度规则会降低集群的调度速度，因此不建议在超过数百个节点中的集群中使用。
  
-### 4. Resource Request
+### Resource Request
 
 在定义 Pod 时可以选择性地为每个容器设定所需要的资源数量。 最常见的可设定资源是 CPU 和内存（RAM）大小，从而使得 Pod 调度到符合资源需求的节点上，示例如下：
 
@@ -249,7 +249,7 @@ QoS 等级有三类，基于 limits 和 requests 确定：
 
 通过这种方式，Kubernetes 鼓励我们按实际需要分配资源，如果我们随意设置甚至不设置资源，则 Kubernetes 会做出“惩罚”，资源不足时优先将这类 Pod 驱逐。
 
-### 5. Taints & Tolerations
+### Taints & Tolerations
 
 上面提到的规则基本都是表示将 Pod 调度到哪个节点，而对于某些节点，我们希望 Pod 不要调度到该节点上去。此时可以通过给 Node 打 Taint(污点) 的方式实现。
 
@@ -388,7 +388,7 @@ tolerations:
 ```
 
 
-### 6. Pod 驱逐
+### Pod 驱逐
 
 在基于资源进行调度一节中提到，当资源不足时 Kubernetes 会将 QoS 等级较低的 Pod 杀死，该过程在 Kubernetes 中称为驱逐（Eviction）。
 
@@ -429,9 +429,9 @@ evictionHard:
   imagefs.available:  "5%"
 ```
 
-### 7, 调度过程
+### 调度过程
 
-了解了 Kubernetes 的调度规则后，我们再来看下 Kubernetes 调度过程是怎样实现的。
+了解了 Kubernetes 的调度规则后，我们再来看下 Kubernetes 调度过程是怎样实现的。这里对过程最简要分析，更详细的流程可以参考的文章 [【kubernetes 源码剖析】kube-scheduler 调度流程](https://blog.csdn.net/Ahri_J/article/details/151409125)。
 
 Kubernetes 调度过程图所示：
 
@@ -452,11 +452,10 @@ Kubernetes 调度过程图所示：
 	- **Bind**：经过过滤打分最终选出合适的 Node 后，会更新本地调度缓存闭关通过异步请求的方式更新 Etcd 中 Pod 的 nodeName 属性。这样如果调度成功则本地缓存与 Etcd 中的信息向保持一致，如果调度失败，则会通过 Informer 循环更新本地缓存，重新调度。
 
 另外为了提升调度性能：
-
 - 调度过程全程只和本地缓存通信，只有在最后的 bind 阶段才会向 api-server 发起异步通信。
 - 调度器不会处理所有的节点，而是选择一部分节点进行过滤、打分操作。
 
-### 8. 自定义调度器
+### 自定义调度器
 
 除了默认的 Kubernetes 默认提供的调度器，我们还可以自定义调度器并在集群中部署多个调度器，然后在创建  Pod 选择使用的调度器。
 
@@ -531,14 +530,79 @@ spec:
         name: kube-second-scheduler
 ```
 
-上面是如何配置的一个新的调度器。对于如何按需实现自己的服务器，Kubernetes 还提供了 [Kubernetes Scheduling Framework](https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/) 来帮我们进行开发。
+部署调度器后，可以在 Pod Spec 中设置 `schedulerName` 字段，指定要选择的调度器。
 
-上面提到 Kubernetes 调度过程分为过滤、打分等一系列阶段，对于这些阶段 Scheduling Framework 提供了一系列的接口使得我们可以自己实现对应的处理，从而实现自定义调度。
+### kube-scheduler 框架
+
+
+自定义调度器通常需要用户自己从头编写、编译、打包为一个完整的程序并部署执行后才可以被使用，整个流程非常的繁琐。为了简化自定义调度器的开发，Kubernetes 提供了 [Kubernetes Scheduling Framework](https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/)，将调度过程中过滤、打分、Reserve 、Permit、绑定等流程以扩展点的形式暴露出来，我们可以实现相应的扩展插件，来定义自己的调度逻辑。
 下面是主要的扩展点。
 
 ![在这里插入图片描述](https://kubernetes.io/images/docs/scheduling-framework-extensions.png)
 
-图片来自 https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/
+具体到代码中就是实现相应的接口，相关接口可以参考 [scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins) 的代码。
 
-具体到代码中就是实现相应的接口，因为是内部扩展机制，因此在修改后需要重新编译部署。具体代码可以参考 [scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins) 的代码。
+在开发完成后，Kubernetes 提供了 [KubeSchedulerConfiguration](https://kubernetes.io/docs/reference/scheduling/config/#multiple-profiles) 配置资源，允许我们配置多个调度器信息，并且可以为每个调度器指定不同的插件组合。
+
+比我我们基于框架实现一个 my-scheduler 调度器，然后做部署：
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-scheduler
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: my-scheduler
+  template:
+    metadata:
+      labels:
+        component: my-scheduler
+    spec:
+      serviceAccountName: my-scheduler-sa
+      containers:
+      - name: my-scheduler
+        image: myrepo/my-scheduler:latest
+        command:
+        - /my-scheduler
+        - --config=/etc/kubernetes/scheduler-config/config.yaml
+        volumeMounts:
+        - mountPath: /etc/kubernetes/scheduler-config
+          name: config
+          readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: my-scheduler-config
+```
+部署完成后，通过 KubeSchedulerConfiguration 修改 kube-scheduler 的配置，将我们的自定义调度器配置进去。
+
+```
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+- schedulerName: default-scheduler
+- schedulerName: my-scheduler   # Pod 用这个名字调度
+  plugins:
+    filter:
+      enabled:
+      - name: MyFilterPlugin
+    score:
+      enabled:
+      - name: MyScorePlugin
+  pluginConfig:
+  - name: MyScorePlugin
+    args:
+      weight: 10
+```
+
+调度可能是 Kubernetes 被讨论最多的话题之一，尤其是在现代大模型训练场景下，对调度策略的要求变得愈加严格和复杂，像 [Volcano]() 的 批处理任务（Batch）和 AI 任务调度、[Ray](https://github.com/ray-project/ray) 的资源感知调度、[Koordinator](https://koordinator.sh/) 基于异构混部的负载感知、潮汐调度都是新出的框架。
+
+这是一个能够一通百通的技术方向，从 Linux 内核线程调度、Kubernetes Pod 调度到 Golang 的 goroutine 调度，再到各类任务调度，对技术深度有追求的同学不妨在这个领域深入钻研一下。
+
+
+
 
