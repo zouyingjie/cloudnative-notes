@@ -85,7 +85,7 @@ export default defineUserConfig({
       },
       {
         text: '目录',
-        link: '/end/dots.md',
+        link: '/end/toc.md',
       },
       {
         text: '通用设计',
