@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as n,b as a,d as s}from"./app-C-eiXR-Q.js";const d={};function o(c,e){return n(),t("div",null,[...e[0]||(e[0]=[a("h1",{id:"服务网格的设计",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#服务网格的设计","aria-hidden":"true"},"#"),s(" 服务网格的设计")],-1)])])}const l=r(d,[["render",o],["__file","design.html.vue"]]);export{l as default};

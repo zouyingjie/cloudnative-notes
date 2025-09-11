@@ -1,0 +1,1 @@
+import{_ as a,c as n,o as r,b as o,d as s}from"./app-C-eiXR-Q.js";const t={};function l(c,e){return r(),n("div",null,[...e[0]||(e[0]=[o("h1",{id:"nosql-建模规范",tabindex:"-1"},[o("a",{class:"header-anchor",href:"#nosql-建模规范","aria-hidden":"true"},"#"),s(" NoSQL 建模规范")],-1)])])}const _=a(t,[["render",l],["__file","nosql.html.vue"]]);export{_ as default};

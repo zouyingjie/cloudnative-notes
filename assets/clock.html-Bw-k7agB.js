@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as c,b as a,d as o}from"./app-C-eiXR-Q.js";const n={};function s(d,e){return c(),t("div",null,[...e[0]||(e[0]=[a("h1",{id:"分布式时钟",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#分布式时钟","aria-hidden":"true"},"#"),o(" 分布式时钟")],-1)])])}const _=r(n,[["render",s],["__file","clock.html.vue"]]);export{_ as default};

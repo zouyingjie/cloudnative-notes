@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as n,b as r,d as o}from"./app-C-eiXR-Q.js";const s={};function c(d,e){return n(),a("div",null,[...e[0]||(e[0]=[r("h1",{id:"流量路由",tabindex:"-1"},[r("a",{class:"header-anchor",href:"#流量路由","aria-hidden":"true"},"#"),o(" 流量路由")],-1)])])}const l=t(s,[["render",c],["__file","routing.html.vue"]]);export{l as default};

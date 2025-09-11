@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-511de8ae","path":"/common-design/modeling/","title":"数据库索引设计与优化","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1757600821000,"contributors":[{"name":"zouyingjie","email":"yingjiezou1@gmail.com","commits":1}]},"filePathRelative":"common-design/modeling/index.md","readingTime":{"minutes":0.03,"words":10}}');export{e as data};

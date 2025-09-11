@@ -1,0 +1,1 @@
+import{_ as a,c as r,o as n,b as t,d as i}from"./app-C-eiXR-Q.js";const o={};function s(c,e){return n(),r("div",null,[...e[0]||(e[0]=[t("h1",{id:"限流设计",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#限流设计","aria-hidden":"true"},"#"),i(" 限流设计")],-1)])])}const l=a(o,[["render",s],["__file","rate-limiting.html.vue"]]);export{l as default};

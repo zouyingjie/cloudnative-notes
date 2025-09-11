@@ -1,0 +1,1 @@
+import{_ as r,c as n,o as t,b as a,d}from"./app-C-eiXR-Q.js";const c={};function o(s,e){return t(),n("div",null,[...e[0]||(e[0]=[a("h1",{id:"服务冗余",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#服务冗余","aria-hidden":"true"},"#"),d(" 服务冗余")],-1)])])}const _=r(c,[["render",o],["__file","redundancy.html.vue"]]);export{_ as default};

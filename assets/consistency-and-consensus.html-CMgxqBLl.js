@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as a,b as n,d as c}from"./app-C-eiXR-Q.js";const o={};function r(d,e){return a(),t("div",null,[...e[0]||(e[0]=[n("h1",{id:"分布式共识",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#分布式共识","aria-hidden":"true"},"#"),c(" 分布式共识")],-1)])])}const l=s(o,[["render",r],["__file","consistency-and-consensus.html.vue"]]);export{l as default};

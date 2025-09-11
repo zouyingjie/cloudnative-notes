@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as n,b as a,d as c}from"./app-C-eiXR-Q.js";const o={};function s(d,e){return n(),t("div",null,[...e[0]||(e[0]=[a("h1",{id:"分布式追踪",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#分布式追踪","aria-hidden":"true"},"#"),c(" 分布式追踪")],-1)])])}const l=r(o,[["render",s],["__file","tracing.html.vue"]]);export{l as default};

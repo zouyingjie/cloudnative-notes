@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-7b41da59","path":"/end/about.html","title":"关于本书","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1757600821000,"contributors":[{"name":"zouyingjie","email":"yingjiezou1@gmail.com","commits":1}]},"filePathRelative":"end/about.md","readingTime":{"minutes":2.02,"words":605}}');export{e as data};
