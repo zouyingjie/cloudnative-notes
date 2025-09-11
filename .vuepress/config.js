@@ -250,7 +250,7 @@ export default defineUserConfig({
             children: [
               '/cloudnative/devops/devops',
               '/cloudnative/devops/gitflow',
-              // '/cloudnative/devops/cicd',
+              '/cloudnative/devops/cicd',
             ]
           },
         ]
