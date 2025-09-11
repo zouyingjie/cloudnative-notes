@@ -188,8 +188,8 @@ export default defineUserConfig({
                   '/cloudnative/kubernetes/security',
                   '/cloudnative/kubernetes/application',
                   '/cloudnative/kubernetes/monitoring',
-                  '/cloudnative/kubernetes/future',
-                  '/cloudnative/kubernetes/cka',
+                  // '/cloudnative/kubernetes/future',
+                  // '/cloudnative/kubernetes/cka',
 
                 ]
               },
@@ -250,7 +250,7 @@ export default defineUserConfig({
             children: [
               '/cloudnative/devops/devops',
               '/cloudnative/devops/gitflow',
-              '/cloudnative/devops/cicd',
+              // '/cloudnative/devops/cicd',
             ]
           },
         ]
