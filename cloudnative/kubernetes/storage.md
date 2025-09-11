@@ -62,7 +62,7 @@ spec:
       type: FileOrCreate
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1fa7e08fbe9aed53e93cd5eff367d2e4.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/1fa7e08fbe9aed53e93cd5eff367d2e4.png)
 
 图片来自 《Kubernetes In Action》
 
@@ -116,7 +116,7 @@ spec:
 
 这样在实际使用时，集群可以预先创建一批 PV 提供存储，而用户则只需要创建 PVC 提出自己的存储需求就行了。Kubernetes 会自动将 PVC 与 PV 进行绑定，在将 PVC 挂载到 Pod 中去，就可以进行数据的读写了。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4e6e97d763769fab1268199faf3ac78c.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/4e6e97d763769fab1268199faf3ac78c.png)
 
 图片来自《Kubernetes in Action》
 
@@ -263,7 +263,7 @@ spec:
 
 因此为了及时、灵活的分配与管理存储资源，Kubernetes 引入了 Dynamic Provisioning 动态供应的方式，其提供了 StorageClass 资源对象，相当于 PV 的模板，该对象基于一个存储的提供者（Provisioner），比如 NFS，AWS S3 等，当用户需要存储资源时，只需要创建对应的 PVC 并指定 StorageClass，Pod 在创建完成需要使用存储资源时，StorageClass 就会根据需要自动的创建 PV 并绑定 PVC。与之相对的，预建 PV 的形式为成为 Static Provisioning。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/764542d2109c7083a6860a4094885baa.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/764542d2109c7083a6860a4094885baa.png)
 
 图片来自《Kubernetes in Action》
 
@@ -443,7 +443,7 @@ $ docker run -v /var/lib/kubelet/pods/<Pod的ID>/volumes/kubernetes.io~<Volume�
 
 上面提到的 PV 挂载过程，在没有 CSI 之前其 Provision、Attach、Mount 等操作最终都是通过 Kubernetes 内置的 Volume 插件完成的。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/073cd434ff0f06914247104cbeaa4e58.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/073cd434ff0f06914247104cbeaa4e58.png)
 
 图片来自
 ​https://medium.com/google-cloud/understanding-the-container-storage-interface-csi-ddbeb966a3b​
@@ -456,14 +456,14 @@ Kubernetes 早期内置了非常多的 Volume 插件，为其广泛推广发挥�
 因此 Kubernetes 从 1.14 版本开始了内置插件的外迁工作。和之前看到 CNI 网络接口旨在提供移一致的容器网络操作一样，CSI 则是对所有的容器编排系统，比如 Kubernetes、Docker swarm 提供一致的存储访问接口，第三方存储插件只需要按照 CSI 实现对应的接口实现就可以满足所有系统的需要。
 
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a05996fe55ae9ad0e8cce7583202624.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/1a05996fe55ae9ad0e8cce7583202624.png)
 
 ​​图片来自
 ​https://medium.com/google-cloud/understanding-the-container-storage-interface-csi-ddbeb966a3b​
 
 使用了 CSI 插件后 Kuberetes 存储架构如下：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/150953587d80edea73584bdde719bfcf.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/150953587d80edea73584bdde719bfcf.png)
  
 图片来自​https://medium.com/google-cloud/understanding-the-container-storage-interface-csi-ddbeb966a3b​
 

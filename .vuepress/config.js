@@ -107,15 +107,15 @@ export default defineUserConfig({
             ]
           },
 
-          {
-            text: '软件测试',
-            children: [
-              '/common-design/testing/unit-test',
-              '/common-design/testing/function',
-              '/common-design/testing/contract',
-              '/common-design/testing/load'
-            ]
-          },
+          // {
+          //   text: '软件测试',
+          //   children: [
+          //     '/common-design/testing/unit-test',
+          //     '/common-design/testing/function',
+          //     '/common-design/testing/contract',
+          //     '/common-design/testing/load'
+          //   ]
+          // },
           {
             text: '认证与授权',
             children: [
@@ -171,7 +171,6 @@ export default defineUserConfig({
                   '/cloudnative/container/docker-cgroups',
                   '/cloudnative/container/docker-filesystem',
                   '/cloudnative/container/docker-devicemapper',
-                  '/cloudnative/container/500line',
                   '/cloudnative/container/docker',
 
                 ]
