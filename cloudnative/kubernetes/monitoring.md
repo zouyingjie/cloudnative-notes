@@ -1,11 +1,10 @@
 # 集群监控与 debug
 
-
 ### 一. Kubernetes 监控
 #### 1.1 Metrics Server
 
 Metrics Server 是 Kubernetes 提供的监控工具，主要用来收集 Node 和 Pod 的 CPU、内存使用情况。其本质就是通过 kube-aggregator 实现的一个 server。
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/38042b5be26b6c040191595fb15f1b3e.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/38042b5be26b6c040191595fb15f1b3e.png)
 
 图片来自 https://www.jetstack.io/blog/resource-and-custom-metrics-hpa-v2/
 
@@ -377,7 +376,7 @@ If you don't see a command prompt, try pressing enter.
 #### 2.2 网络调试
 除了应用本身的问题 ，Kuberetes 中网络问题算是占比较大的问题类型，但 Pod 中的容器往往都只安装了应用所需的依赖和命令，操作系统中的很多程序和命令都是没有的，比如 tcdump 、ifconfig、vim 等程序。为了方便调试网络问题社区提供了 nicolaka/netshoot 工具，其包含众多常用的网络以及相关调试命令。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eab389f38c2210a88300d54a38c376dd.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/eab389f38c2210a88300d54a38c376dd.png)
 
 
 下面是使用 netshoot 的一个示例，在使用我们的 EaseMesh 做灰度时，需要通过抓包检查下请求是否到了灰度应用中。

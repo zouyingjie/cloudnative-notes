@@ -18,7 +18,7 @@
 
 Kubernetes 各个组件之间的通信采用的是 mTLS 认证方式，服务端与客户端都需要各自进行身份认证。Kubernetes 中各个组件通信情况如图：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75137a4fc3694c036151967099b3175e.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/75137a4fc3694c036151967099b3175e.png)
 
 Server 端包括
 
@@ -117,7 +117,8 @@ apiserver 收到外部请求时，首先要需要经过一系列的验证后才�
 - 权限验证：What can you do？
 - 准入控制: 请求是否合法？
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72bdd189d04fe67d3e4a6c9f48bacc7a.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/72bdd189d04fe67d3e4a6c9f48bacc7a.png)
+
 对于身份验证，Kubernetes 中身份信息可以分为两类：
 
 - **Service Account**：集群内部进行身份认证和授权的服务账户。
@@ -166,9 +167,6 @@ lrwxrwxrwx    1 root  root 13 Aug 31 03:24 ca.crt -> ..data/ca.crt
 lrwxrwxrwx    1 root  root 16 Aug 31 03:24 namespace -> ..data/namespace
 lrwxrwxrwx    1 root  root 12 Aug 31 03:24 token -> ..data/token
 ```
-
-
-
 
 我们也可以直接使用该 token 与 apiserver 通信。
 
@@ -313,11 +311,6 @@ certificatesigningrequest.certificates.k8s.io/Jane created
 ```
 
 
-
-
-
-
-
 ##### 批准 Certificate Signing Request
 
 新创建的 CSR 处于 Pending 状态，需要批准后才能使用。
@@ -439,7 +432,7 @@ Kubeconfig 文件可以分为三部分：
 - **Users**：   用户信息，指定用户名以及私钥、证书作为访问凭证。
 - **Contexts**：访问上下文，指定用哪个用户访问哪个集群。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e391b7298278647cdee8b4ef3e6be96a.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/e391b7298278647cdee8b4ef3e6be96a.png)
 
 通过添加不同的集群和用户，并设置不同的上下文，我们就可以在同一个终端对不同的集群进行访问。
 
@@ -454,11 +447,11 @@ Modify kubeconfig files using subcommands like "kubectl config set current-conte
 
   1.  If the --kubeconfig flag is set, then only that file is loaded. The flag may only be set once and no merging takes
 place.
-  2.  If $KUBECONFIG environment variable is set, then it is used as a list of paths (normal path delimiting rules for
+  1.  If $KUBECONFIG environment variable is set, then it is used as a list of paths (normal path delimiting rules for
 your system). These paths are merged. When a value is modified, it is modified in the file that defines the stanza. When
 a value is created, it is created in the first file that exists. If no files in the chain exist, then it creates the
 last file in the list.
-  3.  Otherwise, ${HOME}/.kube/config is used and no merging takes place.
+  1.  Otherwise, ${HOME}/.kube/config is used and no merging takes place.
 
 Available Commands:
   current-context Display the current-context
@@ -772,7 +765,7 @@ kubectl create clusterrolebinding myapp-view-binding --clusterrole=view --servic
 Kubernetes 也一样，需要对外部提交的请求做校验、拦截修改等操作。所谓准入控制器就是一系列的插件，每个插件都有其特定的功能，比如允许哪些请求进入，限定对资源的使用，设定 Pod 的安全策略等。它们作为看门人（gatekeeper）来对发送到 Kubernetes 做拦截验证，从而实现对集群使用方式的管理，
 
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/55299c8f8c185258c4980dff5557df11.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/55299c8f8c185258c4980dff5557df11.png)
 
 图片来自 https://sysdig.com/blog/kubernetes-admission-controllers/
 
@@ -1231,7 +1224,7 @@ lo        Link encap:Local Loopback
 ...
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49120e9723d1a2064896616def00cb0e.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/49120e9723d1a2064896616def00cb0e.png)
 
 
 像 Kubernetes 的控制平面组件 kube-apiserver 等都是设置了该选项，从而使得它们的行为与不在 Pod 中运行时相同。
@@ -1723,7 +1716,7 @@ spec:
 
 以上是对 Kubernetes 安全相关的简单概述，在实际云原生环境里，其安全性按层分需要从所谓的 4C（Cloud, Clusters, Containers, and Code.）四个层面来保证。Kubernetes 只是其中的一层而已。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f14dc24b85627ce5fa32bf015b08938f.png)
+![在这里插入图片描述](https://pub-08b57ed9c8ce4fadab4077a9d577e857.r2.dev/f14dc24b85627ce5fa32bf015b08938f.png)
 
 
 
