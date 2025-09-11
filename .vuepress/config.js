@@ -69,10 +69,10 @@ export default defineUserConfig({
       text: '首页',
       link: '/'
     },
-    {
-      text: '作者',
-      link: '/about.md'
-    },
+    // {
+    //   text: '作者',
+    //   link: '/about.md'
+    // },
     {
       text: '讨论',
       link: 'https://github.com/zouyingjie/cloudnativenotes/discussions'
