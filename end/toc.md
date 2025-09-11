@@ -4,7 +4,6 @@
 
 
 - [前言](https://zouyingjie.github.io/cloudnativenotes/end/about.html)
-- [目录](https://zouyingjie.github.io/cloudnativenotes/end/toc.html)
 
 ---
 
@@ -14,10 +13,10 @@
 
 | 章节 | 状态 | 字数 |
 |---|---|---|
-| [DBMS 的演进](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/history.html)| 已完成 | 1|
-| [index](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/index.html) | 已完成 | 1|
-| [mysql](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/mysql.html) | 已完成 | 1|
-| [nosql](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/nosql.html) | 已完成 | 1|
+| [DBMS 的演进](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/history.html)|  <font color=#90EE90>Doing</font> |  1207 字|
+| [数据库索引的设计与优化](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/index.html) |  <font color=#FFD700>Plan</font>  | 0 字|
+| [MySQL 开发规范](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/mysql.html) |  <font color=#90EE90>Doing</font>  | 688字|
+| [NoSQL 建模规范](https://zouyingjie.github.io/cloudnativenotes/common-design/modeling/nosql.html) |  <font color=#FFD700>Plan</font> |  0 字|
 
 **API 设计**
 
@@ -50,7 +49,6 @@
 
 | 章节 | 状态 | 字数 |
 |---|---|---|
-
 | [数据分片与复制](https://zouyingjie.github.io/cloudnativenotes/distributed-system-theory/sharding-and-replication.html) | <font color=#FFD700>Plan</font> | 0 字|
 | [一致性与共识算法](https://zouyingjie.github.io/cloudnativenotes/distributed-system-theory/consistency-and-consensus.html) | <font color=#FFD700>Plan</font> | 0 字|
 | [分布式事务](https://zouyingjie.github.io/cloudnativenotes/distributed-system-theory/transaction.html) | <font color=#FFD700>Plan</font> | 0 字|
@@ -63,7 +61,7 @@
 | 章节 | 状态 | 字数 |
 |---|---|---|
 | [系统架构的演进](https://zouyingjie.github.io/cloudnativenotes/cloudnative/architecture/architecture.html) | <font color=#006400>Done</font> | 1746 字|
-| [definition](https://zouyingjie.github.io/cloudnativenotes/cloudnative/architecture/definition.html) | <font color=#006400>Done</font> | 1116 字|
+| [云原生的定义](https://zouyingjie.github.io/cloudnativenotes/cloudnative/architecture/definition.html) | <font color=#006400>Done</font> | 1116 字|
 | [云原生平台的构建](https://zouyingjie.github.io/cloudnativenotes/cloudnative/architecture/pass.html) | <font color=#90EE90>Doing</font>  | 315 字|
 ### 不可变基础设施
   
@@ -108,22 +106,21 @@
 
 
 
-
 **流量治理**
 | 章节 | 状态 | 字数 |
 |---|---|---|
-| [loadbalancing](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/loadbalancing.html) | <font color=#FFD700>Plan</font>  | 0 字|
-| [routing](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/routing.html) | <font color=#FFD700>Plan</font>  | 0 字|
-| [rate-limiting](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/rate-limiting.html) | <font color=#FFD700>Plan</font>  | 0 字|
-| [mirroring](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/mirroring.html) |  <font color=#FFD700>Plan</font>  | 0 字|
+| [负载均衡](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/loadbalancing.html) | <font color=#FFD700>Plan</font>  | 0 字|
+| [流量路由](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/routing.html) | <font color=#FFD700>Plan</font>  | 0 字|
+| [限流设计](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/rate-limiting.html) | <font color=#FFD700>Plan</font>  | 0 字|
+| [流量镜像](https://zouyingjie.github.io/cloudnativenotes/cloudnative/service/traffic/mirroring.html) |  <font color=#FFD700>Plan</font>  | 0 字|
 
 **可观测性**
 | 章节 | 状态 | 字数 |
 |---|---|---|
-| [definition](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/definition.html) | <font color=#006400>Done</font>  | 881 字|
-| [metrics](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/metrics.html) | <font color=#006400>Done</font>  | 1985 字|
-| [logging](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/logging.html) | <font color=#90EE90>Doing</font>   | 2668 字|
-| [trace](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/trace.html) | <font color=#FFD700>Plan</font>  | 0 字|
+| [什么是可观测性](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/definition.html) | <font color=#006400>Done</font>  | 881 字|
+| [指标](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/metrics.html) | <font color=#006400>Done</font>  | 1985 字|
+| [日志](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/logging.html) | <font color=#90EE90>Doing</font>   | 2668 字|
+| [追踪](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/trace.html) | <font color=#FFD700>Plan</font>  | 0 字|
 | [全栈监控系统架构](https://zouyingjie.github.io/cloudnativenotes/cloudnative/observability/monitoring.html) | <font color=#006400>Done</font>  | 4829 字|
 
 **DevOps**
