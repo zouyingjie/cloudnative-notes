@@ -12,7 +12,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '云原生架构笔记',
   description: '构建大规模高可用的分布式系统',
-  base: "/cloudnative-notes/",
+  base: "/cloudnativenotes/",
   extendsMarkdown: (md) => {
       md.use(imsize)
   },
@@ -33,7 +33,7 @@ export default defineUserConfig({
     }),
     commentPlugin({
       provider: "Giscus",
-      repo: "zouyingjie/cloudnative-notes",
+      repo: "zouyingjie/cloudnativenotes",
       repoId: "R_kgDOPOHDYg",
       category: "General",
       categoryId: "DIC_kwDOPOHDYs4CtIgJ"
