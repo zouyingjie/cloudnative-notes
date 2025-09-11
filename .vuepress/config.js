@@ -210,17 +210,17 @@ export default defineUserConfig({
               '/cloudnative/service/stack',
               '/cloudnative/service/discovery',
               '/cloudnative/service/lifecycle',
-              {
-                text: '服务弹力设计',
-                children: [
-                  '/cloudnative/service/resilience/availability',
-                  '/cloudnative/service/resilience/redundancy',
-                  '/cloudnative/service/resilience/decoupling',
-                  '/cloudnative/service/resilience/fault-tolerance',
-                  '/cloudnative/service/resilience/patterns',
+              // {
+              //   text: '服务弹力设计',
+              //   children: [
+              //     '/cloudnative/service/resilience/availability',
+              //     '/cloudnative/service/resilience/redundancy',
+              //     '/cloudnative/service/resilience/decoupling',
+              //     '/cloudnative/service/resilience/fault-tolerance',
+              //     '/cloudnative/service/resilience/patterns',
 
-                ]
-              }
+              //   ]
+              // }
             ]
           },
           {
